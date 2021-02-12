@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import About from "../components/About";
 import Service from "../components/service";
 import SerciveDetail from "../components/serviceDetail";
+import Gallery from "../components/gallery";
 
 class Header extends Component {
   render() {
@@ -80,7 +81,7 @@ class Header extends Component {
                             </ul>
                           </li>
                           <li>
-                            <a href="gallery.html">GALLERY</a>
+                           <Link to="/gallery">GALLERY</Link>
                           </li>
                           <li>
                             <a href="team.html">TEAM</a>
@@ -129,31 +130,24 @@ class Header extends Component {
                           <a href="index.html">HOME</a>
                           <ul>
                             <li>
-                              <a href="index.html">Home one</a>
-                            </li>
-                            <li>
-                              <a href="boxed-layout.html">Boxed Layout Page</a>
+                            <Link to ="/">Home</Link>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="about.html">ABOUT</a>
+                           <Link to ="/about">About </Link>
                         </li>
                         <li>
-                          <a href="service.html">SERVICES</a>
+                           <Link to ="/service">Services </Link>
                           <ul>
                             <li>
-                              <a href="service.html">Service Page</a>
-                            </li>
-                            <li>
-                              <a href="service-details.html">
+                            <Link to ="/servicedetail">Service Details Page </Link>
                                 Service Details Page
-                              </a>
-                            </li>
+                           </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="gallery.html">GALLERY</a>
+                          <Link to="/gallery">GALLERY</Link>
                         </li>
                         <li>
                           <a href="team.html">TEAM</a>
@@ -213,14 +207,17 @@ class Header extends Component {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/about">
+            <Route  path="/about">
               <About />
             </Route>
-            <Route exact path="/service">
+            <Route  path="/service">
               <Service />
             </Route>
-            <Route exact path="/servicedetail">
+            <Route  path="/servicedetail">
               <SerciveDetail />
+            </Route>
+            <Route  path="/gallery">
+              <Gallery />
             </Route>
           </Switch>
         </div>

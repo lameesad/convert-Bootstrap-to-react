@@ -4,7 +4,9 @@ class SerciveDetail extends Component {
   render() {
     return (<div>
 
-<div class="breadcrumb-area bg-image section-ptb" style="background-image: url(assets/images/bg/breadcrumb-bg.jpg)">
+<div class="breadcrumb-area bg-image section-ptb"  style={{
+                backgroundImage: "url(" + "assets/images/bg/breadcrumb-bg.jpg" + ")",
+              }}>
     <div class="container">
         <div class="row breadcrumb">
             <div class="col">
