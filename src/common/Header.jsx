@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "../components/Home";
 import About from "../components/About";
-import Service from "../components/service";
-import SerciveDetail from "../components/serviceDetail";
-import Gallery from "../components/gallery";
+import Service from "../components/Service";
+import SerciveDetail from "../components/ServiceDetail";
+import Gallery from "../components/Gallery";
+import Team from "../components/Team";
+import Blog from "../components/Blog";
+import BlogDetail from "../components/BlogDetail";
+import Contactus from "../components/Contactus";
 
 class Header extends Component {
   render() {
@@ -51,9 +55,9 @@ class Header extends Component {
                   <div class="col-lg-3 col-md-6 col-6">
                     <div class="cuscol">
                       <div class="logo">
-                        <a href="index.html">
+                      <Link to ="/">
                           <img src="assets/images/logo/logo.png" alt="logo" />
-                        </a>
+                          </Link>
                       </div>
                     </div>
                   </div>
@@ -81,26 +85,22 @@ class Header extends Component {
                             </ul>
                           </li>
                           <li>
-                           <Link to="/gallery">GALLERY</Link>
+                           <Link to="/gallery">Gallery</Link>
                           </li>
                           <li>
-                            <a href="team.html">TEAM</a>
+                             <Link to ="/team"> Team </Link>
                           </li>
                           <li>
-                            <a href="#">BLOG</a>
+                          <Link to ="/blog"> Blog </Link>
                             <ul class="sub-menu">
+                             
                               <li>
-                                <a href="blog.html">Blog page</a>
-                              </li>
-                              <li>
-                                <a href="blog-details.html">
-                                  Blog Details Page
-                                </a>
+                              <Link to ="/blogdetail"> Blog Detail </Link>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="contact-us.html">CONTACT</a>
+                          <Link to ="/contactus"> Contact Us </Link>
                           </li>
                         </ul>
                       </nav>
@@ -127,12 +127,8 @@ class Header extends Component {
                     <div id="menu" class="text-left clickable-menu-style">
                       <ul>
                         <li>
-                          <a href="index.html">HOME</a>
-                          <ul>
-                            <li>
-                            <Link to ="/">Home</Link>
-                            </li>
-                          </ul>
+                        <Link to ="/">Home</Link>
+                    
                         </li>
                         <li>
                            <Link to ="/about">About </Link>
@@ -147,19 +143,16 @@ class Header extends Component {
                           </ul>
                         </li>
                         <li>
-                          <Link to="/gallery">GALLERY</Link>
+                          <Link to="/gallery">Gallery</Link>
                         </li>
                         <li>
-                          <a href="team.html">TEAM</a>
+                        <Link to ="/team"> Team </Link>
                         </li>
                         <li>
-                          <a href="#">BLOG</a>
+                        <Link to ="/blog"> Blog </Link>
                           <ul>
                             <li>
-                              <a href="blog.html">Blog page</a>
-                            </li>
-                            <li>
-                              <a href="blog-details.html">Blog Details Page</a>
+                            <Link to ="/blogdetail"> Blog Detail </Link>
                             </li>
                           </ul>
                         </li>
@@ -219,6 +212,19 @@ class Header extends Component {
             <Route  path="/gallery">
               <Gallery />
             </Route>
+            <Route  path="/team">
+              <Team />
+            </Route>
+            <Route  path="/blog">
+              <Blog />
+            </Route>
+            <Route  path="/blogdetail">
+              <BlogDetail />
+            </Route>
+            <Route  path="/contactus">
+              <Contactus/>
+            </Route>
+
           </Switch>
         </div>
       </Router>
